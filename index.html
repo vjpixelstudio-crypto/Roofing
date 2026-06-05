@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titan Roofing & Exteriors | Expert Roofing Solutions</title>
+<meta name="description" content="Premium roofing contractors providing installations, repairs, storm damage restoration, and inspections. Free roof inspection. Licensed and warranted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ─── TOKENS ─── */
+:root{
+  --void:#080808;
+  --coal:#111111;
+  --iron:#1a1a1a;
+  --steel:#252525;
+  --blade:#e01f1f;
+  --blade2:#ff3333;
+  --rust:#b91010;
+  --gold:#c9a227;
+  --gold2:#e8bc3a;
+  --smoke:#888;
+  --ash:#555;
+  --paper:#f5f4f0;
+  --cream:#eeece8;
+  --white:#ffffff;
+  --r:10px;
+  --r2:16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--coal);overflow-x:hidden;font-size:16px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* ─── UTILITY ─── */
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+h2{font-family:'Anton',sans-serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;letter-spacing:.02em;text-transform:uppercase}
+h3{font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.04em;text-transform:uppercase}
+.lead{color:var(--smoke);font-size:1rem;line-height:1.75;font-weight:300;max-width:560px}
+.sec{padding:80px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blade);margin-bottom:14px}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--blade);flex-shrink:0}
+
+/* ─── BUTTONS ─── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;font-family:'Manrope',sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.04em;border:none;cursor:pointer;transition:all .22s;text-decoration:none;white-space:nowrap;text-transform:uppercase;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)}
+.btn-red{background:var(--blade);color:#fff}
+.btn-red:hover{background:var(--blade2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(224,31,31,.4)}
+.btn-white{background:#fff;color:var(--coal)}
+.btn-white:hover{background:var(--blade);color:#fff;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);clip-path:none}
+.btn-outline:hover{border-color:var(--blade);color:var(--blade)}
+.btn-full{width:100%;clip-path:none;border-radius:var(--r)}
+
+/* ─── TOPBAR ─── */
+.topbar{background:var(--blade);color:#fff;text-align:center;padding:10px 20px;font-size:.85rem;font-weight:700;letter-spacing:.04em;line-height:1.5}
+.topbar a{color:#fff;text-decoration:underline;font-weight:800}
+
+/* ─── NAV ─── */
+nav{
+  position:sticky;top:0;z-index:900;
+  background:rgba(8,8,8,.98);backdrop-filter:blur(16px);
+  border-bottom:3px solid var(--blade);
+  padding:0 20px;height:68px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.logo{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:.06em;color:#fff;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo em{color:var(--blade);font-style:normal}
+.logo-icon{font-size:1.3rem}
+.nav-links{display:none;list-style:none;gap:28px}
+.nav-links a{color:rgba(255,255,255,.6);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--blade)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-phone{color:#fff;font-weight:800;font-size:.9rem;display:none;letter-spacing:.02em}
+@media(min-width:640px){.nav-phone{display:block}}
+@media(min-width:960px){.nav-links{display:flex}}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100svh;background:var(--void);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:40px 0 60px;
+}
+.hero-scan{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.012) 3px,rgba(255,255,255,.012) 4px);pointer-events:none}
+.hero-red-slash{position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(224,31,31,.07) 100%);clip-path:polygon(25% 0,100% 0,100% 100%,0 100%);pointer-events:none}
+.hero-glow{position:absolute;bottom:0;right:0;width:500px;height:500px;background:radial-gradient(circle,rgba(224,31,31,.07),transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:0 20px}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.hero-line{width:40px;height:3px;background:var(--blade);flex-shrink:0}
+.hero-eyebrow span{font-size:.72rem;font-weight:800;letter-spacing:.18em;color:var(--blade);text-transform:uppercase}
+.hero h1{font-family:'Anton',sans-serif;font-size:clamp(2.8rem,9vw,5.8rem);color:#fff;line-height:1.0;letter-spacing:.02em;text-transform:uppercase;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--blade)}
+.hero-sub{color:var(--smoke);font-size:1.05rem;line-height:1.75;font-weight:300;margin-bottom:32px;max-width:580px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.hero-btns .btn{flex:1;min-width:160px;max-width:240px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.08);border-radius:4px;overflow:hidden}
+.hstat{padding:18px 10px;text-align:center;background:rgba(255,255,255,.03);border-right:1px solid rgba(255,255,255,.07)}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:'Anton',sans-serif;font-size:1.9rem;color:var(--blade);letter-spacing:.04em;display:block}
+.hstat-l{font-size:.65rem;color:var(--smoke);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+@media(max-width:500px){.hero-stats{grid-template-columns:repeat(2,1fr)}.hstat:nth-child(2){border-right:none}.hstat:nth-child(1),.hstat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}}
+
+/* ─── TRUST BAR ─── */
+.trust-bar{background:var(--blade);padding:14px 0;overflow:hidden}
+.trust-track{display:flex;gap:48px;align-items:center;animation:scroll-x 22s linear infinite;width:max-content}
+@keyframes scroll-x{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.trust-item{display:flex;align-items:center;gap:9px;color:#fff;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.trust-item span{font-size:.95rem}
+
+/* ─── SERVICES ─── */
+#services{background:var(--paper)}
+.section-head{margin-bottom:48px}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:3px}
+.scard{
+  background:var(--cream);padding:28px;position:relative;overflow:hidden;
+  transition:all .3s;cursor:default;border-bottom:3px solid transparent;
+}
+.scard:hover{background:#fff;border-bottom-color:var(--blade);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.1)}
+.scard-num{position:absolute;top:14px;right:16px;font-family:'Anton',sans-serif;font-size:2.8rem;color:rgba(0,0,0,.05);letter-spacing:.02em;line-height:1}
+.scard-icon{font-size:1.9rem;margin-bottom:14px;display:block}
+.scard h3{color:var(--coal);margin-bottom:8px}
+.scard p{color:var(--ash);font-size:.9rem;line-height:1.65;font-weight:300}
+
+/* ─── PROCESS ─── */
+#process{background:var(--coal)}
+#process .section-head h2{color:#fff}
+#process .lead{margin-bottom:48px}
+.pgrid{display:grid;gap:3px}
+@media(min-width:640px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.pgrid{grid-template-columns:repeat(4,1fr)}}
+.pcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:28px;position:relative;overflow:hidden;transition:all .3s}
+.pcard:hover{background:rgba(224,31,31,.08);border-color:rgba(224,31,31,.25)}
+.pcard-n{font-family:'Anton',sans-serif;font-size:5rem;color:rgba(224,31,31,.1);position:absolute;right:12px;top:6px;letter-spacing:.02em;line-height:1}
+.pcard-icon{font-size:1.8rem;margin-bottom:14px}
+.pcard h3{color:#fff;margin-bottom:8px}
+.pcard p{color:var(--smoke);font-size:.88rem;line-height:1.65;font-weight:300}
+
+/* ─── WHY ─── */
+#why{background:#fff}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:48px}
+.wcard{padding:24px;background:var(--paper);border:2px solid var(--cream);border-left:4px solid var(--blade);transition:all .3s}
+.wcard:hover{background:#fff;box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateX(4px)}
+.wcard-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.wcard h3{color:var(--coal);margin-bottom:7px}
+.wcard p{color:var(--ash);font-size:.88rem;line-height:1.65;font-weight:300}
+
+/* ─── GALLERY ─── */
+#gallery{background:var(--void)}
+#gallery .section-head h2{color:#fff}
+#gallery .lead{margin-bottom:40px}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:4px}
+.gitem{background:var(--iron);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;cursor:default}
+.gitem-icon{font-size:2.5rem;opacity:.35;transition:opacity .3s}
+.gitem-label{color:var(--smoke);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:opacity .3s}
+.gitem-overlay{position:absolute;inset:0;background:rgba(224,31,31,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .3s}
+.gitem:hover .gitem-overlay{opacity:1}
+.gitem:hover .gitem-icon,.gitem:hover .gitem-label{opacity:0}
+.gov-title{font-family:'Anton',sans-serif;font-size:1.2rem;letter-spacing:.06em;color:#fff;text-transform:uppercase}
+.gov-sub{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700}
+
+/* ─── STATS STRIP ─── */
+.stats-strip{background:var(--blade);padding:0}
+.sstats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.sstat{text-align:center;padding:32px 16px;border-right:1px solid rgba(255,255,255,.2)}
+.sstat:last-child{border-right:none}
+.sstat-n{font-family:'Anton',sans-serif;font-size:2.8rem;color:#fff;letter-spacing:.04em;display:block}
+.sstat-l{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:3px}
+@media(max-width:600px){.sstats{grid-template-columns:repeat(2,1fr)}.sstat{border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}.sstat:nth-child(2){border-right:none}.sstat:nth-child(3){border-bottom:none}.sstat:last-child{border-bottom:none;border-right:none}}
+
+/* ─── TESTIMONIALS ─── */
+#testimonials{background:var(--paper)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:16px;margin-top:48px}
+.tcard{background:#fff;border:2px solid var(--cream);border-bottom:4px solid transparent;padding:24px;transition:all .3s;position:relative}
+.tcard:hover{border-bottom-color:var(--blade);box-shadow:0 10px 32px rgba(0,0,0,.08)}
+.tquote{font-family:'Anton',sans-serif;font-size:3rem;color:var(--blade);line-height:.8;margin-bottom:12px;opacity:.4}
+.stars{color:var(--blade);font-size:.9rem;margin-bottom:12px;letter-spacing:.06em}
+.ttext{color:var(--ash);line-height:1.75;font-size:.92rem;font-style:italic;font-weight:300;margin-bottom:18px}
+.tauthor{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--cream)}
+.tavatar{width:42px;height:42px;background:var(--blade);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0;font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:.04em}
+.tname{font-weight:800;color:var(--coal);font-size:.9rem}
+.tloc{color:var(--smoke);font-size:.77rem;margin-top:1px}
+
+/* ─── FINANCING ─── */
+#financing{background:var(--coal)}
+.fin-inner{display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.fin-inner{grid-template-columns:1fr 1fr}}
+.fin-badge{display:inline-block;background:var(--gold);color:var(--coal);padding:6px 14px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.fin-inner h2{color:#fff;margin-bottom:12px}
+.fin-inner .lead{margin-bottom:24px}
+.fin-options{display:flex;flex-direction:column;gap:12px}
+.fin-opt{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-left:4px solid var(--gold);padding:18px 20px;transition:all .3s}
+.fin-opt:hover{background:rgba(201,162,39,.08);border-left-color:var(--gold2)}
+.fin-opt h4{font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:.06em;color:#fff;text-transform:uppercase;margin-bottom:5px}
+.fin-opt p{color:var(--smoke);font-size:.85rem;font-weight:300;line-height:1.6}
+
+/* ─── ABOUT ─── */
+#about{background:var(--paper)}
+.about-grid{display:grid;gap:40px;margin-top:48px}
+@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr;align-items:center}}
+.about-visual{background:var(--coal);padding:40px 24px;text-align:center;position:relative;overflow:hidden;border-bottom:4px solid var(--blade)}
+.about-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 110%,rgba(224,31,31,.1),transparent 60%);pointer-events:none}
+.av-icon{font-size:4rem;margin-bottom:16px;position:relative}
+.av-tag{font-family:'Anton',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;text-transform:uppercase;margin-bottom:6px}
+.av-sub{color:var(--blade);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.av-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.av-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.8);padding:7px 14px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.about-text h2{margin-bottom:14px}
+.about-text p{color:var(--ash);line-height:1.78;margin-bottom:14px;font-size:.96rem;font-weight:300}
+.alist{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:6px}
+.alist li{display:flex;align-items:center;gap:10px;color:var(--coal);font-size:.93rem;font-weight:600;padding:10px 14px;background:#fff;border:2px solid var(--cream);border-left:4px solid var(--blade)}
+.alist li::before{content:'→';color:var(--blade);font-weight:800;flex-shrink:0}
+
+/* ─── FAQ ─── */
+#faq{background:#fff}
+.faq-wrap{max-width:720px;margin:40px auto 0;display:flex;flex-direction:column;gap:3px}
+.fitem{background:var(--paper);border-bottom:2px solid var(--cream);overflow:hidden}
+.fq{width:100%;text-align:left;background:none;border:none;padding:18px 20px;font-family:'Manrope',sans-serif;font-size:.97rem;font-weight:700;color:var(--coal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4;transition:color .2s;letter-spacing:.01em}
+.fq:hover,.fitem.open .fq{color:var(--blade)}
+.ficon{width:28px;height:28px;background:var(--blade);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0;transition:transform .3s;font-weight:800}
+.fitem.open .ficon{transform:rotate(45deg)}
+.fa{padding:0 20px;max-height:0;overflow:hidden;transition:all .35s ease;color:var(--ash);line-height:1.75;font-size:.93rem;font-weight:300}
+.fitem.open .fa{max-height:240px;padding-bottom:20px}
+.fitem.open{border-left:4px solid var(--blade)}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--coal)}
+#contact .section-head h2{color:#fff}
+#contact .lead{margin-bottom:40px}
+.cgrid{display:grid;gap:32px}
+@media(min-width:768px){.cgrid{grid-template-columns:1fr 1.1fr;align-items:start}}
+.cinfo{display:flex;flex-direction:column;gap:10px}
+.iitem{display:flex;gap:14px;padding:16px 18px;background:rgba(255,255,255,.04);border-left:4px solid var(--blade);align-items:flex-start}
+.iicon{width:44px;height:44px;background:var(--blade);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.ilabel{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--smoke);font-weight:800;margin-bottom:3px}
+.ival{font-weight:700;color:#fff;font-size:.95rem;line-height:1.5}
+.ival a{color:#fff;transition:color .2s}
+.ival a:hover{color:var(--blade)}
+.ival-note{color:var(--blade);font-size:.82rem;font-weight:700}
+.cform{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-top:4px solid var(--blade);padding:28px}
+.ftitle{font-family:'Anton',sans-serif;font-size:1.5rem;letter-spacing:.06em;color:#fff;text-transform:uppercase;margin-bottom:22px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.frow{grid-template-columns:1fr}}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:.7rem;font-weight:800;color:var(--smoke);margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em}
+.fg input,.fg textarea,.fg select{
+  width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);
+  padding:13px 15px;font-family:'Manrope',sans-serif;font-size:.95rem;color:#fff;
+  outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:4px;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.25)}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--blade);box-shadow:0 0 0 3px rgba(224,31,31,.12)}
+.fg select option{background:var(--coal);color:#fff}
+.fg textarea{resize:vertical;min-height:96px}
+.fsub{
+  width:100%;background:var(--blade);color:#fff;border:none;
+  padding:16px;font-family:'Anton',sans-serif;font-size:1.2rem;
+  letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;
+}
+.fsub:hover{background:var(--blade2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(224,31,31,.4)}
+.map-ph{background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.12);height:160px;display:flex;align-items:center;justify-content:center;color:var(--smoke);font-size:.88rem;margin-top:12px;text-align:center;padding:16px}
+
+/* ─── FOOTER ─── */
+footer{background:var(--void);border-top:3px solid var(--blade);padding:56px 0 24px}
+.fg-main{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
+@media(min-width:720px){.fg-main{grid-template-columns:2fr 1fr 1fr 1fr}}
+.fbrand .logo{margin-bottom:14px}
+.fbrand p{color:var(--smoke);font-size:.87rem;line-height:1.7;font-weight:300;max-width:260px;margin-bottom:18px}
+.fsoc{display:flex;gap:8px}
+.fsoc a{width:36px;height:36px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--smoke);font-size:.82rem;font-weight:800;transition:all .2s}
+.fsoc a:hover{background:var(--blade);border-color:var(--blade);color:#fff}
+.fcol h4{font-family:'Anton',sans-serif;font-size:.95rem;letter-spacing:.08em;color:#fff;text-transform:uppercase;margin-bottom:14px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fcol ul li a{color:var(--smoke);font-size:.87rem;font-weight:300;transition:color .2s;display:flex;align-items:center;gap:6px}
+.fcol ul li a:hover{color:var(--blade)}
+.fcol ul li a::before{content:'→';font-size:.7rem;color:var(--blade)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:20px}
+.fcopy{color:var(--smoke);font-size:.82rem}
+.fcopy strong{color:var(--blade)}
+
+/* ─── WHATSAPP ─── */
+.wa-btn{position:fixed;bottom:20px;right:16px;z-index:999;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.45);animation:bob 3s ease-in-out infinite;text-decoration:none}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.wa-btn:hover{transform:scale(1.12)!important}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-l.on{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-r.on{opacity:1;transform:translateX(0)}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">🚨 Storm Damage? Emergency Roofing Available 24/7 — <a href="tel:+10000000000">Call (000) 000-0000</a></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><span class="logo-icon">🏗️</span>TITAN<em>.</em></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Projects</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+10000000000" class="nav-phone">📞 (000) 000-0000</a>
+    <a href="#contact" class="btn btn-red" style="padding:11px 18px;font-size:.8rem;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)">Free Inspection</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-scan"></div>
+  <div class="hero-red-slash"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><div class="hero-line"></div><span>Licensed Roofing Contractors</span></div>
+    <h1>Protecting Homes With <em>Expert</em> Roofing</h1>
+    <p class="hero-sub">Trusted roofing specialists for installations, repairs, storm damage restoration, and inspections. Built to last. Backed by warranty.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-red">🔍 Free Inspection</a>
+      <a href="#contact" class="btn btn-outline">Get A Quote →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-n">1000+</span><div class="hstat-l">Projects</div></div>
+      <div class="hstat"><span class="hstat-n">15+</span><div class="hstat-l">Years</div></div>
+      <div class="hstat"><span class="hstat-n">500+</span><div class="hstat-l">Clients</div></div>
+      <div class="hstat"><span class="hstat-n">24/7</span><div class="hstat-l">Emergency</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-track">
+    <div class="trust-item"><span>✅</span> Licensed Contractors</div>
+    <div class="trust-item"><span>🛡️</span> Free Estimates</div>
+    <div class="trust-item"><span>🔩</span> Premium Materials</div>
+    <div class="trust-item"><span>📋</span> Warranty Protected</div>
+    <div class="trust-item"><span>⚡</span> 24/7 Emergency</div>
+    <div class="trust-item"><span>🏆</span> 1000+ Projects Completed</div>
+    <div class="trust-item"><span>💰</span> Financing Available</div>
+    <!-- dupe -->
+    <div class="trust-item"><span>✅</span> Licensed Contractors</div>
+    <div class="trust-item"><span>🛡️</span> Free Estimates</div>
+    <div class="trust-item"><span>🔩</span> Premium Materials</div>
+    <div class="trust-item"><span>📋</span> Warranty Protected</div>
+    <div class="trust-item"><span>⚡</span> 24/7 Emergency</div>
+    <div class="trust-item"><span>🏆</span> 1000+ Projects Completed</div>
+    <div class="trust-item"><span>💰</span> Financing Available</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>Complete Roofing Services</h2>
+      <p class="lead">From a single repair to a full commercial installation — every Titan job is built to last decades.</p>
+    </div>
+    <div class="sgrid">
+      <div class="scard reveal"><div class="scard-num">01</div><span class="scard-icon">🏠</span><h3>Roof Installation</h3><p>New construction and full installs — asphalt shingles, metal, tile, and flat roofing systems using premium materials.</p></div>
+      <div class="scard reveal"><div class="scard-num">02</div><span class="scard-icon">🔨</span><h3>Roof Repair</h3><p>Fast repairs for leaks, missing shingles, flashing failures, and structural issues. Most repairs completed same day.</p></div>
+      <div class="scard reveal"><div class="scard-num">03</div><span class="scard-icon">🔄</span><h3>Roof Replacement</h3><p>Complete tear-off and replacement with minimal disruption. Full property protection and cleanup included.</p></div>
+      <div class="scard reveal"><div class="scard-num">04</div><span class="scard-icon">⛈️</span><h3>Storm Damage Repair</h3><p>Emergency storm response with full insurance claim assistance — we document damage and work directly with your insurer.</p></div>
+      <div class="scard reveal"><div class="scard-num">05</div><span class="scard-icon">🏢</span><h3>Commercial Roofing</h3><p>Flat roofs, TPO, EPDM, and commercial metal roofing. Minimal business interruption, maximum durability.</p></div>
+      <div class="scard reveal"><div class="scard-num">06</div><span class="scard-icon">🏡</span><h3>Residential Roofing</h3><p>Precision installation with complete cleanup. We leave your property cleaner than we found it — guaranteed.</p></div>
+      <div class="scard reveal"><div class="scard-num">07</div><span class="scard-icon">🔎</span><h3>Roof Inspection</h3><p>Comprehensive drone and hands-on inspection with full photo documentation — ideal pre-purchase or annual maintenance.</p></div>
+      <div class="scard reveal"><div class="scard-num">08</div><span class="scard-icon">🌧️</span><h3>Gutter Installation</h3><p>Seamless gutters custom-formed on-site. Gutter guards, downspouts, and drainage solutions to protect your foundation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:#fff;opacity:.8">How It Works</div>
+      <h2 style="color:#fff">From Call to Completion</h2>
+      <p class="lead">Straightforward process, zero surprises — every time.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pcard reveal"><div class="pcard-n">01</div><div class="pcard-icon">📞</div><h3>Call or Book</h3><p>Call us or submit the online form. We confirm your appointment and give a precise arrival window.</p></div>
+      <div class="pcard reveal"><div class="pcard-n">02</div><div class="pcard-icon">🔎</div><h3>Free Inspection</h3><p>Our certified inspector assesses your roof with drone and hands-on review. Full photo report provided.</p></div>
+      <div class="pcard reveal"><div class="pcard-n">03</div><div class="pcard-icon">📋</div><h3>Detailed Quote</h3><p>You receive a written itemized quote. No hidden fees, no pressure — just complete transparency.</p></div>
+      <div class="pcard reveal"><div class="pcard-n">04</div><div class="pcard-icon">✅</div><h3>Expert Install</h3><p>Our crew completes the project efficiently and cleanly. Backed by our industry-leading warranty.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="sec" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Titan</div>
+      <h2>Built Different. Built Better.</h2>
+      <p class="lead">We don't cut corners on materials, labor, or warranty. Every Titan roof is built to perform for decades.</p>
+    </div>
+    <div class="wgrid">
+      <div class="wcard reveal"><span class="wcard-icon">🏅</span><h3>Licensed Contractors</h3><p>Every crew member is licensed, certified, and background-checked. Full liability insurance and workers' comp always carried.</p></div>
+      <div class="wcard reveal"><span class="wcard-icon">📋</span><h3>Free Estimates</h3><p>Detailed, itemized quotes at no charge — no pressure, no upselling, no surprises. Just an honest assessment.</p></div>
+      <div class="wcard reveal"><span class="wcard-icon">🔩</span><h3>Premium Materials</h3><p>We use only manufacturer-approved materials from GAF, Owens Corning, and CertainTeed — for maximum longevity.</p></div>
+      <div class="wcard reveal"><span class="wcard-icon">🛡️</span><h3>Warranty Protection</h3><p>Industry-leading workmanship warranty plus manufacturer material warranties up to 50 years on select products.</p></div>
+      <div class="wcard reveal"><span class="wcard-icon">👷</span><h3>Experienced Team</h3><p>15+ years of combined experience. Our crews have completed over 1,000 residential and commercial projects.</p></div>
+      <div class="wcard reveal"><span class="wcard-icon">⚡</span><h3>Fast Completion</h3><p>Most residential replacements done in 1–2 days. We respect your schedule and minimize household disruption.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery" style="background:var(--void)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:rgba(255,255,255,.5)">Our Work</div>
+      <h2>Projects Gallery</h2>
+      <p class="lead">A selection of residential and commercial projects completed across the region.</p>
+    </div>
+    <div class="ggrid">
+      <div class="gitem reveal"><span class="gitem-icon">🏠</span><span class="gitem-label">Residential Replacement</span><div class="gitem-overlay"><div class="gov-title">Residential</div><div class="gov-sub">Asphalt Shingle Replacement</div></div></div>
+      <div class="gitem reveal"><span class="gitem-icon">🏢</span><span class="gitem-label">Commercial Flat Roof</span><div class="gitem-overlay"><div class="gov-title">Commercial</div><div class="gov-sub">TPO Flat Roof Install</div></div></div>
+      <div class="gitem reveal"><span class="gitem-icon">⛈️</span><span class="gitem-label">Storm Restoration</span><div class="gitem-overlay"><div class="gov-title">Storm Damage</div><div class="gov-sub">Full Restoration</div></div></div>
+      <div class="gitem reveal"><span class="gitem-icon">🏡</span><span class="gitem-label">New Construction</span><div class="gitem-overlay"><div class="gov-title">New Build</div><div class="gov-sub">Metal Roof Install</div></div></div>
+      <div class="gitem reveal"><span class="gitem-icon">🔨</span><span class="gitem-label">Repair &amp; Maintenance</span><div class="gitem-overlay"><div class="gov-title">Roof Repair</div><div class="gov-sub">Flashing &amp; Leak Repair</div></div></div>
+      <div class="gitem reveal"><span class="gitem-icon">🌧️</span><span class="gitem-label">Gutter Systems</span><div class="gitem-overlay"><div class="gov-title">Gutters</div><div class="gov-sub">Seamless Gutter Install</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container"><div class="sstats">
+    <div class="sstat"><span class="sstat-n">1000+</span><div class="sstat-l">Projects Done</div></div>
+    <div class="sstat"><span class="sstat-n">15+</span><div class="sstat-l">Years Experience</div></div>
+    <div class="sstat"><span class="sstat-n">500+</span><div class="sstat-l">Happy Clients</div></div>
+    <div class="sstat"><span class="sstat-n">24/7</span><div class="sstat-l">Emergency Service</div></div>
+  </div></div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Client Reviews</div>
+      <h2>What Clients Say</h2>
+      <p class="lead">Our reputation is built on quality and honest service — hear it from the homeowners we've served.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">Titan replaced our entire roof in one day. The crew was professional, efficient, cleaned everything up perfectly. The new roof looks incredible and feels rock solid.</p><div class="tauthor"><div class="tavatar">RC</div><div><div class="tname">Robert Callahan</div><div class="tloc">Homeowner · Northside</div></div></div></div>
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">After a major hailstorm, Titan walked us through the entire insurance claim process. They documented everything and we got a full roof replacement covered. Outstanding.</p><div class="tauthor"><div class="tavatar">MH</div><div><div class="tname">Maria Henderson</div><div class="tloc">Homeowner · Westfield</div></div></div></div>
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">Had three companies quote our commercial building. Titan's proposal was the most detailed. Six months later the roof has performed flawlessly through two major storms.</p><div class="tauthor"><div class="tavatar">TW</div><div><div class="tname">Thomas Wright</div><div class="tloc">Business Owner · Downtown</div></div></div></div>
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">The free inspection found issues my previous roofer had missed. Small fix now saved me from a massive repair later. I trust Titan completely with my home.</p><div class="tauthor"><div class="tavatar">JP</div><div><div class="tname">Janet Pruett</div><div class="tloc">Homeowner · Eastpark</div></div></div></div>
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">Seamless gutters and gutter guards installed perfectly. On time, immaculate work, explained everything they were doing. Will call Titan for every future project.</p><div class="tauthor"><div class="tavatar">BS</div><div><div class="tname">Brian Sullivan</div><div class="tloc">Homeowner · Lakewood</div></div></div></div>
+      <div class="tcard reveal"><div class="tquote">"</div><div class="stars">★★★★★</div><p class="ttext">Emergency repair during a rainstorm — Titan was there in 2 hours. Waterproofed same day, full repair the following week. Absolute professionals from start to finish.</p><div class="tauthor"><div class="tavatar">KL</div><div><div class="tname">Karen Liu</div><div class="tloc">Homeowner · Riverside</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCING -->
+<section class="sec" id="financing" style="background:var(--coal)">
+  <div class="container">
+    <div class="fin-inner">
+      <div class="reveal-l">
+        <div class="fin-badge">💰 Financing Available</div>
+        <h2 style="color:#fff;margin-bottom:12px">Don't Let Budget Stop You</h2>
+        <p class="lead" style="margin-bottom:24px">Flexible options to protect your home without the financial strain. We make quality roofing accessible.</p>
+        <a href="#contact" class="btn btn-red">Ask About Financing →</a>
+      </div>
+      <div class="fin-options reveal-r">
+        <div class="fin-opt"><h4>0% Interest Financing</h4><p>Qualified buyers can take advantage of 0% interest for up to 18 months on eligible projects.</p></div>
+        <div class="fin-opt"><h4>Low Monthly Payments</h4><p>Flexible plans spread the cost of your roof over time — no prepayment penalties ever.</p></div>
+        <div class="fin-opt"><h4>Insurance Claims Help</h4><p>We work directly with your insurance company to maximize your storm damage claim and minimize out-of-pocket costs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-l">
+        <div class="av-icon">🏗️</div>
+        <div class="av-tag">Titan Roofing &amp; Exteriors</div>
+        <div class="av-sub">Trusted Since 2010</div>
+        <div class="av-badges">
+          <span class="av-badge">Licensed</span><span class="av-badge">Insured</span>
+          <span class="av-badge">Bonded</span><span class="av-badge">5-Star</span>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <div class="eyebrow">Our Story</div>
+        <h2 style="margin-bottom:14px">Strength You Can Count On</h2>
+        <p>Titan Roofing was built on a simple principle: a great roof is more than materials — it's craftsmanship, integrity, and a relationship that lasts decades. Since 2010, we've protected over 500 homes and businesses across the region.</p>
+        <p>Our team includes master roofers with decades of experience in every roofing system. We stay current on the latest materials, techniques, and building codes so every Titan roof is built to last and built to code.</p>
+        <ul class="alist">
+          <li>15+ years of roofing expertise</li>
+          <li>1,000+ completed projects</li>
+          <li>Manufacturer-certified installers</li>
+          <li>Full insurance documentation provided</li>
+          <li>Locally owned and community-focused</li>
+          <li>Industry-leading workmanship warranty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <div class="eyebrow" style="justify-content:center">FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">How long does a roof replacement take?<div class="ficon">+</div></button><div class="fa">Most residential replacements are completed in 1–2 days depending on size and complexity. We give a precise timeline in your estimate and minimize disruption throughout.</div></div>
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">Do you offer free inspections?<div class="ficon">+</div></button><div class="fa">Yes — free comprehensive roof inspections with detailed photo documentation. Ideal for homeowners who haven't had their roof inspected recently or are considering a home purchase.</div></div>
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">Do you help with insurance claims?<div class="ficon">+</div></button><div class="fa">Absolutely. We have extensive experience working with insurance companies on storm damage claims. We document all damage and can be present during the adjuster inspection to ensure nothing is missed.</div></div>
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">What roofing materials do you use?<div class="ficon">+</div></button><div class="fa">We use premium materials from GAF, Owens Corning, CertainTeed, and other top manufacturers. We recommend materials based on your climate, budget, and home style with full transparency.</div></div>
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">What warranty do you provide?<div class="ficon">+</div></button><div class="fa">We provide a workmanship warranty on all projects plus manufacturer material warranties ranging from 25–50 years on qualifying products. Full documentation provided at project completion.</div></div>
+      <div class="fitem reveal"><button class="fq" onclick="tf(this)">Do you provide emergency roofing service?<div class="ficon">+</div></button><div class="fa">Yes — 24/7 emergency roofing service. Storm damage, sudden leaks, or any urgent situation — call anytime and we'll respond quickly to protect your home from further damage.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:rgba(255,255,255,.5)">Get In Touch</div>
+      <h2>Request Your Free Inspection</h2>
+      <p class="lead">Schedule a free inspection or request a quote. We respond within 1 business hour.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cinfo reveal-l">
+        <div class="iitem"><div class="iicon">📞</div><div><div class="ilabel">Phone</div><div class="ival"><a href="tel:+10000000000">(000) 000-0000</a></div></div></div>
+        <div class="iitem"><div class="iicon">📧</div><div><div class="ilabel">Email</div><div class="ival"><a href="mailto:info@titanroofing.com">info@titanroofing.com</a></div></div></div>
+        <div class="iitem"><div class="iicon">⏰</div><div><div class="ilabel">Business Hours</div><div class="ival">Mon–Sat: 7am–7pm<br><span class="ival-note">Emergency: 24/7</span></div></div></div>
+        <div class="iitem"><div class="iicon">📍</div><div><div class="ilabel">Service Area</div><div class="ival">Local City &amp; Nearby Areas</div></div></div>
+        <a href="tel:+10000000000" class="btn btn-red btn-full" style="clip-path:none;border-radius:var(--r)">📞 Call for Emergency Service</a>
+        <div class="map-ph">📍 Replace with Google Maps embed code</div>
+      </div>
+      <div class="cform reveal-r">
+        <div class="ftitle">Get Your Free Quote</div>
+        <div class="frow">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Phone</label><input type="tel" placeholder="(000) 000-0000"></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="john@email.com"></div>
+        </div>
+        <div class="fg"><label>Service Type</label>
+          <select><option>Select a Service</option><option>Roof Installation</option><option>Roof Repair</option><option>Roof Replacement</option><option>Storm Damage Repair</option><option>Commercial Roofing</option><option>Free Roof Inspection</option><option>Gutter Installation</option><option>Other</option></select>
+        </div>
+        <div class="fg"><label>Property Address</label><input type="text" placeholder="123 Main Street, City"></div>
+        <div class="fg"><label>Project Details</label><textarea placeholder="Tell us about your roof — age, issues, materials you're considering..."></textarea></div>
+        <button class="fsub" onclick="alert('Thank you! A Titan specialist will contact you within 1 hour.')">Send My Request →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fg-main">
+      <div class="fbrand">
+        <a href="#" class="logo"><span class="logo-icon">🏗️</span>TITAN<em>.</em></a>
+        <p>Premium roofing solutions for homeowners and businesses since 2010. Licensed, insured, and backed by industry-leading warranties.</p>
+        <div class="fsoc">
+          <a href="#">f</a><a href="#">in</a><a href="#">𝕏</a><a href="#">▶</a>
+        </div>
+      </div>
+      <div class="fcol"><h4>Services</h4><ul>
+        <li><a href="#services">Roof Installation</a></li>
+        <li><a href="#services">Roof Repair</a></li>
+        <li><a href="#services">Storm Damage</a></li>
+        <li><a href="#services">Commercial</a></li>
+        <li><a href="#services">Gutters</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Company</h4><ul>
+        <li><a href="#about">About Titan</a></li>
+        <li><a href="#gallery">Our Projects</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#financing">Financing</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Contact</h4><ul>
+        <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+        <li><a href="mailto:info@titanroofing.com">Email Us</a></li>
+        <li><a href="#contact">Free Inspection</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2025 <strong>Titan Roofing &amp; Exteriors</strong>. All rights reserved.</div>
+      <div class="fcopy">Privacy Policy · Terms of Service</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/10000000000" class="wa-btn" target="_blank">💬</a>
+
+<script>
+function tf(btn){
+  const item=btn.closest('.fitem');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.fitem.open').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4)*.09+'s';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
